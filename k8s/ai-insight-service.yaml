@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-insight-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ai-insight-service
+  template:
+    metadata:
+      labels:
+        app: ai-insight-service
+    spec:
+      containers:
+        - name: ai-insight-service
+          image: ai-insight-service:latest
+          imagePullPolicy: Never
+          env:
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka:29092"
