@@ -73,7 +73,7 @@ Open **http://localhost:5173** in your browser.
 ## 📁 Project Structure
 
 ```
-TASK-MANAGER/
+Task-Manager/
 ├── task-service/          # Main REST API (Spring Boot)
 ├── ai-insight-service/    # AI analysis microservice
 ├── notification-service/  # Event-driven notifications
